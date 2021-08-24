@@ -5,9 +5,7 @@
 $fecha = strftime(%D);
 $hora =  strftime(%T);
 $registro = "
-Nombre: $nombre
-Personal: $personal
-ES: $es
+
 Hora: $hora";
 
 $archivo = fopen("$fecha.txt","a");
