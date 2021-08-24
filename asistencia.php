@@ -1,7 +1,7 @@
 <html>
 <head>
 <?php
-$nombre = $_post["select"];
+$nombre = $_POST["select"];
 $personal = $_POST["pe"];
 $es = $_POST["in"];
 $fecha = strftime(%D);
