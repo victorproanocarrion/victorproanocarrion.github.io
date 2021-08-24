@@ -1,9 +1,7 @@
 <html>
 <head>
 <?php
-$nombre = $_POST["select"];
-$personal = $_POST["pe"];
-$es = $_POST["in"];
+
 $fecha = strftime(%D);
 $hora =  strftime(%T);
 $registro = "
