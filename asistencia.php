@@ -1,9 +1,9 @@
 <html>
 <head>
 <?php
-$nombre = $_post["select"];
-$personal = $_post["pe"];
-$es = $_post["in"];
+$nombre = $_POST["select"];
+$personal = $_POST["pe"];
+$es = $_POST["in"];
 $fecha = strftime(%D);
 $hora =  strftime(%T);
 $registro = "
