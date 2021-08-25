@@ -40,10 +40,10 @@
             Es = document.getElementByName("in")[0].value;
                     
           var fso  = CreateObject("Scripting.FileSystemObject"); 
-            var s = fso.CreateTextFile("localhost/asist.txt", true);
+            var s = fso.CreateTextFile("asist.txt", true);
                 s.WriteLine(Nombre+" "+Personal+" "+Es);
                 s.Close();
-          alert(Nombre+" "+Personal+" "+Es);
+          alert("si entro");
                    
         };
     </script>  
