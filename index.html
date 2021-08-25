@@ -1,5 +1,31 @@
 <html>
   
+        
+   <body>
+    <script>
+    
+
+        //submit
+        function sub(){
+            
+          //variables
+         var Nombre = null;
+         var Personal = null;
+         var Es = null;
+          
+          
+          Nombre = document.getElementByName("select")[0].Value;
+            Personal = document.getElementByName("pe")[0].value;
+            Es = document.getElementByName("in")[0].value;
+                    
+          var fso  = CreateObject("Scripting.FileSystemObject"); 
+            var s = fso.CreateTextFile("asist.txt", true);
+                s.WriteLine(Nombre+" "+Personal+" "+Es);
+                s.Close();
+          alert("si entro");
+                   
+        }
+    </script>  
     <form name="form" action="" method="get">
     <p>Nombre: 
    <select name="select">
@@ -25,40 +51,6 @@
  <input type="button" value="ENVIAR" onclick="sub()">
    </p>
 </form>
-        
-   
-    <script type="text/javascript">
-    //variables
-    var Nombre = null;
-    var Personal = null;
-    var Es = null;
-
-        //submit
-        function sub(){
-            Nombre = document.getElementByName("select")[0].Value;
-            Personal = document.getElementByName("pe")[0].value;
-            Es = document.getElementByName("in")[0].value;
-                    
-          var fso  = CreateObject("Scripting.FileSystemObject"); 
-            var s = fso.CreateTextFile("asist.txt", true);
-                s.WriteLine(Nombre+" "+Personal+" "+Es);
-                s.Close();
-          alert("si entro");
-                   
-        };
-    </script>  
-    
-    
-    
-    
-    
-    
-    
-        
-            
-                
-             
-         
-    
+ </body>   
    
 </html>
