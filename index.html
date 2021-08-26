@@ -13,22 +13,20 @@
          var Personal = null;
          var Es = null;
           
-          
-          Nombre = document.getElementByName("select")[0].Value;
-            Personal = document.getElementByName("pe")[0].value;
-            Es = document.getElementByName("in")[0].value;
-                    
-          var fso  = CreateObject("Scripting.FileSystemObject"); 
-            var s = fso.CreateTextFile("asist.txt", true);
-                s.WriteLine(Nombre+" "+Personal+" "+Es);
-                s.Close();
-          alert("si entro");
+         var e = document.getElementById("select");
+         Nombre = e.options[e.selectedIndex].value;
+         var e1 = document.getElementById("pe");
+         Personal = e1.options[e1.selectedIndex].value;
+         var e2 = document.getElementById("in");
+         Es = e2.options[e2.selectedIndex].value;
+                 
+           alert(Nombre+" "+Personal+" "+Es);
                    
         }
     </script>  
     <form name="form" action="" method="get">
     <p>Nombre: 
-   <select name="select">
+   <select id="select">
   <option value="value1">Value 1</option>
   <option value="value2">Value 2</option>
   <option value="value3">Value 3</option>
@@ -37,15 +35,24 @@
 </p>
 
     <p>Personal:
-    <input type="radio" name="pe" value="A"> Administrativo
-    <input type="radio" name="pe" value="D"> Docente
-    <input type="radio" name="pe" value="S"> De Servicio
+      <select id="pe">
+        <option value="Administrativo">Administrativo</option>
+        <option value="Docente">Docente</option>
+        <option value="De Servicio">De Servicio</option>
+      </select>
+    
+      
+      
   </p>
 
 <p>Seleccione:
-    <input type="radio" name="in" value="E"> Entrada
-    <input type="radio" name="in" value="S"> Salida
     
+  <select id="in">
+    <option value="Entrada">Entrada</option>
+    <option value="Salida">Salida</option>
+    </select>
+  
+      
   </p>
   <p>
  <input type="button" value="ENVIAR" onclick="sub()">
